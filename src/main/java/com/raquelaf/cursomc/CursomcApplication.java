@@ -14,7 +14,7 @@ import com.raquelaf.cursomc.domain.Endereco;
 import com.raquelaf.cursomc.domain.Estado;
 import com.raquelaf.cursomc.domain.Produto;
 import com.raquelaf.cursomc.domain.enums.TipoCliente;
-import com.raquelaf.cursomc.repositories.CategoriaResopitory;
+import com.raquelaf.cursomc.repositories.CategoriaRepository;
 import com.raquelaf.cursomc.repositories.CidadeRepository;
 import com.raquelaf.cursomc.repositories.ClienteRepository;
 import com.raquelaf.cursomc.repositories.EnderecoRepository;
@@ -25,7 +25,7 @@ import com.raquelaf.cursomc.repositories.ProdutoResopitory;
 public class CursomcApplication implements CommandLineRunner {
 	
 	@Autowired
-	private CategoriaResopitory catRepo;
+	private CategoriaRepository catRepo;
 	@Autowired
 	private ProdutoResopitory prodRepo;
 	@Autowired
