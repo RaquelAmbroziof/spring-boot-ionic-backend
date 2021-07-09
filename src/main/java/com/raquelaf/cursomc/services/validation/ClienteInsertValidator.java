@@ -15,13 +15,13 @@ import com.raquelaf.cursomc.repositories.ClienteRepository;
 import com.raquelaf.cursomc.resources.exception.FieldMessage;
 import com.raquelaf.cursomc.services.validation.utils.BR;
 
-public class ClientInsertValidator implements ConstraintValidator<ClientInsert, ClienteNewDTO> {
+public class ClienteInsertValidator implements ConstraintValidator<ClienteInsert, ClienteNewDTO> {
 	
 	@Autowired
 	private ClienteRepository repoCli;
 	
 	@Override
-	public void initialize(ClientInsert ann) {
+	public void initialize(ClienteInsert ann) {
 	}
 
 	@Override
@@ -38,7 +38,7 @@ public class ClientInsertValidator implements ConstraintValidator<ClientInsert, 
 		
 		Cliente aux = repoCli.findByEmail(objDto.getEmail());
 		if (aux != null) {
-			list.add(new FieldMessage("email", "Email já existente"));
+			list.add(new FieldMessage("email", "Email já existe"));
 		}
 		
 		for (FieldMessage e : list) {
